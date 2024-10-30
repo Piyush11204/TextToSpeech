@@ -1,8 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensure consistent sizing */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+body {
+    background-color: #f4f4f4; /* Light gray background for contrast */
 }
 
 .main {
@@ -13,8 +17,7 @@
     align-items: center;
     flex-direction: column;
     background: linear-gradient(45deg, #010758, #490d61);
-
-
+    padding: 20px; /* Padding for better layout */
 }
 
 .main h1 {
@@ -22,75 +25,90 @@
     font-weight: 400;
     font-size: 45px;
     text-align: center;
-    margin-bottom: 50px;
-
+    margin-bottom: 30px; /* Reduced margin for a tighter layout */
 }
 
 .main h1 span {
     color: rgb(237, 32, 237);
-    text-decoration:overline;
+    text-decoration: overline;
     font-size: 34px;
-
-
-
 }
-textarea{
+
+textarea {
     width: 70%;
     height: 400px;
     max-width: 600px;
-    border-radius: 20px;
+    border-radius: 15px; /* Slightly smaller border radius */
     outline: none;
-    background: none;
     color: rgb(237, 32, 237);
-    background-color: rgba(190, 228, 223, 0.125) ;
+    background-color: rgba(190, 228, 223, 0.125);
     font-size: 22px;
     padding: 20px;
     margin-bottom: 20px;
     resize: none;
-    border-bottom: 2px solid rgb(237, 32, 237);
-    
+    border: 2px solid rgb(237, 32, 237);
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
-textarea::placeholder{
+
+textarea:focus {
+    border-color: white; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle shadow effect */
+}
+
+textarea::placeholder {
     color: rgba(237, 32, 237, 0.485);
-    font-size: 23px
+    font-size: 23px;
 }
-.row{
+
+.row {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px; /* Space between select and button */
 }
-button{
+
+button {
     width: 150px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 15px; /* Slightly smaller border radius */
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content: center; /* Center the content */
     outline: none;
-    background: none;
+    background: linear-gradient(45deg, #007BFF, #0056b3); /* Gradient background */
+    color: white; /* Changed text color to white */
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none; /* Clean look with no border */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Space between image and text */
+}
+
+select {
+    width: 450px;
+    max-width: 100%; /* Responsive width */
+    height: 50px;
+    border-radius: 15px; /* Slightly smaller border radius */
+    outline: none;
     color: rgb(237, 32, 237);
     font-size: 18px;
     padding: 10px 20px;
     border: 2px solid rgb(237, 32, 237);
     cursor: pointer;
-    
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
 
-}
-button img{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-select{
-    width: 450px;
-    max-width: 450px;
-    height: 50px;
-    border-radius: 20px;
-    outline: none;
-    background: none;
-    color: rgb(237, 32, 237);
-    font-size: 18px;
-    padding: 10px 30px;
-    border: 2px solid rgb(237, 32, 237);
-    cursor: pointer;
+select:focus {
+    border-color: white; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle shadow effect */
 }
