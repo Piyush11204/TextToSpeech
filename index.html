@@ -5,7 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     
-    <title>Text To Speech</title>
+    <title>Text To Speech Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .main {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #007BFF; /* Change this to your preferred color */
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            resize: none;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        select {
+            flex: 1;
+            margin-right: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007BFF; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button img {
+            margin-right: 5px;
+            width: 20px; /* Adjust size as needed */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+    </style>
 </head>
 <body>
     <div class="main">
@@ -13,9 +91,12 @@
         <textarea id="textToSpeak" placeholder="Write anything here..."></textarea>
         <div class="row">
             <select id="voiceSelect"></select>
-            <button><img src="https://fbutube.com/_next/image?url=%2Fdefault%2Fplay_button%2F1.png&w=48&q=75" id="speakButton" alt="">Listen</button>
+            <button id="speakButton">
+                <img src="https://fbutube.com/_next/image?url=%2Fdefault%2Fplay_button%2F1.png&w=48&q=75" alt="">Listen
+            </button>
         </div>
+    </div>
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
